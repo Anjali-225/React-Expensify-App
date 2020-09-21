@@ -38,9 +38,25 @@ const resetCount = () => {
   };
 }
 
+// Reducers
+// 1. Reducers are pure functions - output is only determined by the input
+// 2. Never change state or actions - dont change it directly
 
+//----------------------
+//Pure function
+// const add = (a, b) => {
+//   return a + b;
+// }
+//----------------------
+//----------------------
+//Not pure function
+// let a = 10;
+// const add = (b) => {
+//   return a + b;
+// }
+//---------------------- 
 
-const store = createStore((state = { count: 0 }, action) => {
+const countReducer = (state = { count: 0 }, action) => {
   switch (action.type) {
     case 'INCREMENT':
       // const incrementBy = typeof action.incrementBy === 'number' ? action.incrementBy : 1;
@@ -63,7 +79,11 @@ const store = createStore((state = { count: 0 }, action) => {
     default:
       return state;
   }
-});
+};
+
+//------------------
+
+const store = createStore(countReducer);
 
 const unsubscribe = store.subscribe(() => {
   console.log(store.getState());
