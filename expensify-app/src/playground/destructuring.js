@@ -1,13 +1,13 @@
-//
+// !---------------------------!
 // Object destructuring
-//
+// !---------------------------!
 
 // const person = {
-//   name: 'Andrew',
-//   age: 27,
+//   name: 'Anjali',
+//   age: 19,
 //   location: {
-//     city: 'Philadelphia',
-//     temp: 88
+//     city: 'Rivonia',
+//     temp: 30
 //   }
 // };
 
@@ -16,24 +16,24 @@
 
 // const { city, temp: temperature } = person.location;
 // if (city && temperature) {
-//   console.log(`It's ${temperature} in ${city}.`);
+//   console.log(`It's ${temperature} degrees celcius in ${city}.`);
 // }
 
-// const book = {
-//   title: 'Ego is the Enemy',
-//   author: 'Ryan Holiday',
-//   publisher: {
-//     // name: 'Penguin'
-//   }
-// };
+const book = {
+  title: 'Ego is the Enemy',
+  author: 'Ryan Holiday',
+  publisher: {
+    // name: 'Penguin'
+  }
+};
 
-// const { name: publisherName = 'Self-Published' } = book.publisher;
+const { name: publisherName = 'Self-Published' } = book.publisher;
 
-// console.log(publisherName); // Penguin, Self-Published
+console.log(publisherName); // Penguin, Self-Published
 
-//
+// !---------------------------!
 // Array destructuring
-//
+// !---------------------------!
 
 // const address = ['1299 S Juniper Street', 'Philadelphia', 'Pennsylvania', '19147'];
 // const [, city, state = 'New York'] = address;
