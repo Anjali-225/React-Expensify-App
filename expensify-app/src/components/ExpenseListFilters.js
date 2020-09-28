@@ -10,7 +10,7 @@ class ExpenseListFilters extends React.Component {
     };
 
     onDatesChange = ({ startDate, endDate}) => {
-        this,props.dispatch(setStartDate(startDate));
+        this.props.dispatch(setStartDate(startDate));
         this.props.dispatch(setEndDate(endDate));
     };
 
@@ -24,7 +24,7 @@ class ExpenseListFilters extends React.Component {
         
                 <input 
                     type="text" 
-                    value={props.filters.text} 
+                    value={this.props.filters.text} 
                     onChange={(e) => { 
                         this.props.dispatch(setTextFilter(e.target.value));
                         console.log(e.target.value) 
